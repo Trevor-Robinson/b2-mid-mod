@@ -32,5 +32,12 @@ RSpec.describe 'Mechanics show page' do
 
     expect(page).to have_field(:add_ride)
     expect(page).to have_button('Submit')
+
+    fill_in "add_ride", with: "#{pirates.id}"
+    click_on "Submit"
+
+    expect(current_path).to eq("/mechanics/#{bob.id}")
+    expect(page).to have_content(pirates.name)
+    expect(page).to have_content(mansion.name)
   end
 end

@@ -3,3 +3,8 @@
 <% @mechanic.sorted_rides.each do |ride| %>
   <%= "#{ride.name}" %><br>
 <% end %>
+<%= form_with url: "/ride_mechanics/#{@mechanic.id}", method: :get do |f| %>
+  <%= f.label :add_ride, "Ride ID:" %>
+  <%= f.text_field :add_ride %>
+  <%= f.submit "Submit" %>
+<% end %>
