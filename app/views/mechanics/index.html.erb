@@ -1,0 +1,6 @@
+<h2> All Mechanics </h2>
+<% @mechanics.each do |mechanic| %>
+  <div class = "mechanic-<%= mechanic.id %>">
+  <%= "Name: #{mechanic.name}, Years of Experience: #{mechanic.years_experience}" %>
+</div>
+<% end %>
