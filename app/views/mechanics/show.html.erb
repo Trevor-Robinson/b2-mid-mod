@@ -1,0 +1,5 @@
+<%= "Name: #{@mechanic.name}, Years of Experience: #{@mechanic.years_experience}" %><br>
+<%= "Rides they are working on:" %><br>
+<% @mechanic.sorted_rides.each do |ride| %>
+  <%= "#{ride.name}" %><br>
+<% end %>
